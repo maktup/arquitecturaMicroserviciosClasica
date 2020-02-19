@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+	                         http://maven.apache.org/xsd/maven-4.0.0.xsd" >
+ 
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>pe.com.capacitacion</groupId>
+	<artifactId>boot-admin-server</artifactId>	
+	<name>boot-admin-server</name>
+	<description>boot-admin-server</description>
+    <packaging>jar</packaging>
+    <version>1.0.0</version> 
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.4.RELEASE</version>
+		<relativePath/> 
+	</parent> 
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Finchley.SR2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>		
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-web</artifactId>
+		    <exclusions>
+		        <exclusion>
+		            <artifactId>spring-boot-starter-tomcat</artifactId>
+		            <groupId>org.springframework.boot</groupId>
+		        </exclusion>
+		    </exclusions>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-jetty</artifactId>
+		</dependency>
+     
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+     
+        <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-test</artifactId>
+           <scope>test</scope>
+        </dependency>
+        
+        
+	    <!-- IMPORTANTE: [CONFIG SERVER], manejo de archivos de CONFIGURACION externos -->
+	    <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>  
+		</dependency>
+		
+	    <!-- IMPORTANTE: [EUREKA CLIENT] -->
+		<dependency> 
+		  <groupId>org.springframework.cloud</groupId> 
+		  <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>  
+		</dependency> 
+		
+	    <!-- IMPORTANTE: [ACTUATOR], recopilacion de metricas -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId> 
+		</dependency>
+     
+        <!-- IMPORTANTE: [BOOT-ADMIN SERVER], requerimientos -->
+		<dependency>
+		    <groupId>de.codecentric</groupId>
+		    <artifactId>spring-boot-admin-starter-server</artifactId>
+		    <version>2.1.6</version>
+		</dependency>
+      
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server-ui</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+         
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-test-autoconfigure</artifactId>
+		</dependency>
+      
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-mail</artifactId> 
+		    <version>2.0.3.RELEASE</version>
+		</dependency> 
+		
+		<!-- OTROS --> 	
+		 <dependency>
+		    <groupId>io.netty</groupId>
+		    <artifactId>netty-codec-http</artifactId>
+		    <version>4.1.40.Final</version>
+		</dependency>
+		
+ 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.10</version>
+			<scope>provided</scope>
+		</dependency>
+         
+	</dependencies>
+ 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- ACCESO 'REPOSITORIO CENTRAL' - [NEXUS], requiere tener ACTIVO el 'NEXUS2' localmente & publico por: 'NO-IP' -->
+	<repositories>
+		<repository>
+			<id>repoCentral_TallerMicroservicios</id>
+			<name>Repositorio CENTRAL proporcionado por NEXUS 2</name>
+			<url>http://repositorio-nexus.ddns.net:8081/nexus/content/repositories/Repositorio_TallerMicroservicios_releases/</url>  
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>	
+
+</project>
+
