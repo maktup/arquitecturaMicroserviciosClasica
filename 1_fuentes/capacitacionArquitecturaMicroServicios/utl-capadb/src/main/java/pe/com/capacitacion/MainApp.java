@@ -9,8 +9,7 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan; 
+import org.springframework.context.annotation.Bean;  
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -28,8 +27,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  @EnableDiscoveryClient     //IMPORTANTE: 'EUREKA CLIENT' 
  @EnableHystrix             //IMPORTANTE: 'HYSTRIX' 
  @EnableFeignClients        //IMPORTANTE: 'FEIGN CLIENT'
- @EnableSwagger2            //IMPORTANTE: 'SWAGGER'
- @ComponentScan( basePackages = { "pe.com.capacitacion" } )
+ @EnableSwagger2            //IMPORTANTE: 'SWAGGER' 
  public class MainApp{
 	
 	    public static final String PAQUETE_SCAN = "pe.com.capacitacion.controller";

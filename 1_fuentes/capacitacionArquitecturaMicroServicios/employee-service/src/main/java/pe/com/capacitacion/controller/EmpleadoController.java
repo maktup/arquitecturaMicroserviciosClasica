@@ -35,7 +35,7 @@ import pe.com.capacitacion.service.EmpleadoService;
 	    * @return ResponseEntity<ResponseEmplMsg>
 	    **/
 		@PostMapping( "/post/empleados" )
-	    @ApiOperation( value="Funcionalidad para [CREAR] una ENTIDAD de tipo Empleado.", nickname="eliminarEmpleado", notes="Funcionalidad para [CREAR] una ENTIDAD de tipo Empleado." )
+	    @ApiOperation( value="Funcionalidad para [CREAR] una ENTIDAD de tipo Empleado.", nickname="agregarEmpleado", notes="Funcionalidad para [CREAR] una ENTIDAD de tipo Empleado." )
 		public ResponseEntity<ResponseEmplMsg> agregarEmpleado( @RequestBody Empleado empleado ){ 
 			   log.info( "Empleado 'agregarEmpleado': {}", empleado );
 			   ResponseEntity<ResponseEmplMsg> objResponseMsg = this.objEmpleadoService.agregarEmpleadoService( empleado ); 
@@ -86,7 +86,7 @@ import pe.com.capacitacion.service.EmpleadoService;
 	    * @return ResponseEntity<ResponseEmplMsg> 
 	    **/
 		@GetMapping( "/get/empleados-departamento/{idDep}" )
-	    @ApiOperation( value="Funcionalidad para [CONSULTAR] una ENTIDAD de tipo Empleado por IDEP.", nickname="consultarEmpleadosPorId", notes="Funcionalidad para [CONSULTAR] una ENTIDAD de tipo Empleado por IDEP." )
+	    @ApiOperation( value="Funcionalidad para [CONSULTAR] una ENTIDAD de tipo Empleado por IDDEP.", nickname="consultarEmpleadosPorDepartamento", notes="Funcionalidad para [CONSULTAR] una ENTIDAD de tipo Empleado por IDDEP." ) 
 		public ResponseEntity<ResponseEmplMsg> consultarEmpleadosPorDepartamento( @PathVariable( "idDep" ) Long idDep ){
 			   log.info( "Empleado 'consultarEmpleadosPorDepartamento': idDep={}", idDep );
 			   ResponseEntity<ResponseEmplMsg> objResponseMsg = this.objEmpleadoService.consultarEmpleadosPorDepartamentoService( idDep );

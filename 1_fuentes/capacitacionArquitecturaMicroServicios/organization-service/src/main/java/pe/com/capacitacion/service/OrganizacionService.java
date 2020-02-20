@@ -56,13 +56,8 @@ import pe.com.capacitacion.util.Constantes;
 			   Gson   objGson = new Gson();
 			   String vURI    = "/organizaciones";
 			   
-			   //---------------------------------------------------------------------------------------------------------------------------------------------//
-			   String vNombreServicio = this.constantes.nombreServicio; 
-			   String vValor_01       = this.constantes.valor01; 
-			   String vNombres        = this.objConfigurationData01.getNombres();
-			   String vDni            = this.objConfigurationData01.getDni(); 		
-			   log.info( "vNombreServicio: [" + vNombreServicio + "], vValor_01: [" + vValor_01 + "], vNombres: [" + vNombres + "], vDni: [" + vDni + "]" ); 
-			   //---------------------------------------------------------------------------------------------------------------------------------------------// 
+			   //Variables de Entorno: 
+			   this.mostrarVariablesEntorno( this.constantes, this.objConfigurationData01 );
 			    
 			   RestTemplate objRspTmp = this.objTemplate.build(); 
 		 		 
@@ -111,13 +106,8 @@ import pe.com.capacitacion.util.Constantes;
 	 
 			   String vURI = "/organizaciones/";
 			   
-			   //---------------------------------------------------------------------------------------------------------------------------------------------//
-			   String vNombreServicio = this.constantes.nombreServicio; 
-			   String vValor_01       = this.constantes.valor01; 
-			   String vNombres        = this.objConfigurationData01.getNombres();
-			   String vDni            = this.objConfigurationData01.getDni(); 		
-			   log.info( "vNombreServicio: [" + vNombreServicio + "], vValor_01: [" + vValor_01 + "], vNombres: [" + vNombres + "], vDni: [" + vDni + "]" ); 
-			   //---------------------------------------------------------------------------------------------------------------------------------------------// 
+			   //Variables de Entorno: 
+			   this.mostrarVariablesEntorno( this.constantes, this.objConfigurationData01 ); 
 			    
 			   RestTemplate objRspTmp = this.objTemplate.build(); 
 		 		 
@@ -158,13 +148,8 @@ import pe.com.capacitacion.util.Constantes;
 			   String vURI_01 = "/organizaciones";
 			   String vURI_02 = "/departamentos-organizacion/";
 			   
-			   //---------------------------------------------------------------------------------------------------------------------------------------------//
-			   String vNombreServicio = this.constantes.nombreServicio; 
-			   String vValor_01       = this.constantes.valor01; 
-			   String vNombres        = this.objConfigurationData01.getNombres();
-			   String vDni            = this.objConfigurationData01.getDni(); 		
-			   log.info( "vNombreServicio: [" + vNombreServicio + "], vValor_01: [" + vValor_01 + "], vNombres: [" + vNombres + "], vDni: [" + vDni + "]" ); 
-			   //---------------------------------------------------------------------------------------------------------------------------------------------//
+			   //Variables de Entorno: 
+			   this.mostrarVariablesEntorno( this.constantes, this.objConfigurationData01 );
 			   
 			   RestTemplate objRspTmp  = this.objTemplate.build(); 
 	 
@@ -260,13 +245,8 @@ import pe.com.capacitacion.util.Constantes;
 			   String vURI_01 = "/organizaciones/";
 			   String vURI_02 = "/departamentos-organizacion/";
 			   
-			   //---------------------------------------------------------------------------------------------------------------------------------------------//
-			   String vNombreServicio = this.constantes.nombreServicio; 
-			   String vValor_01       = this.constantes.valor01; 
-			   String vNombres        = this.objConfigurationData01.getNombres();
-			   String vDni            = this.objConfigurationData01.getDni(); 		
-			   log.info( "vNombreServicio: [" + vNombreServicio + "], vValor_01: [" + vValor_01 + "], vNombres: [" + vNombres + "], vDni: [" + vDni + "]" ); 
-			   //---------------------------------------------------------------------------------------------------------------------------------------------//
+			   //Variables de Entorno: 
+			   this.mostrarVariablesEntorno( this.constantes, this.objConfigurationData01 );
 			   
 			   RestTemplate objRspTmp = this.objTemplate.build(); 
  
@@ -349,5 +329,20 @@ import pe.com.capacitacion.util.Constantes;
 			   return objRetorno;	 
 		}
 	 
+	   /**
+	    * mostrarVariablesEntorno
+	    * @param constantesParam
+	    * @param objConfigurationData01Param 
+	    **/
+        private void mostrarVariablesEntorno( Constantes constantesParam, ConfigurationData_01 objConfigurationData01Param ){
+        	    log.info( "-----> Organizacion 'mostrarVariablesEntorno'" );
+        	 
+			    String vNombreServicio = constantesParam.nombreServicio; 
+			    String vValor_01       = constantesParam.valor01; 
+			    String vNombres        = objConfigurationData01Param.getNombres();
+			    String vDni            =  objConfigurationData01Param.getDni(); 			
+			    log.info( "vNombreServicio: [" + vNombreServicio + "], vValor_01: [" + vValor_01 + "], vNombres: [" + vNombres + "], vDni: [" + vDni + "]" ); 
+        }
+        
  }
  
