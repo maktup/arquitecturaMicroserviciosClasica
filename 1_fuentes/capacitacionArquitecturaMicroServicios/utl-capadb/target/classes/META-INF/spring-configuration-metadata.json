@@ -1,0 +1,28 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "pe.com.capacitacion.properties.ConfigurationData_01",
+      "name": "grupoconfig01",
+      "type": "pe.com.capacitacion.properties.ConfigurationData_01"
+    },
+    {
+      "sourceType": "pe.com.capacitacion.MainApp",
+      "name": "spring.datasource",
+      "sourceMethod": "getDataSource()",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "pe.com.capacitacion.properties.ConfigurationData_01",
+      "name": "grupoconfig01.dni",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "pe.com.capacitacion.properties.ConfigurationData_01",
+      "name": "grupoconfig01.nombres",
+      "type": "java.lang.String"
+    }
+  ]
+}

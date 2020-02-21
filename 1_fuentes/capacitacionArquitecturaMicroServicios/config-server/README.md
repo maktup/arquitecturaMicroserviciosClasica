@@ -11,10 +11,9 @@ Para DETALLES del MICROSERVICIO, apoyarse en ACTUATOR ingresando a: 'http://loca
 
 PROBANDO:
 -------- 
-Para probar el correcto acceso remoto del 'CONFIG-SERVER' al repositorio 'GITHUB', una vez desplegador se debe ingresar, para visualizar
+Para probar el CORRECTO acceso remoto del 'CONFIG-SERVER' al repositorio 'GITHUB', una vez desplegado e iniciado se debe ingresar por las URLs, para visualizar
 los archivos de configuracion: 
-
-- http://localhost:8888/config-server.properties
+ 
 - http://localhost:8888/boot-admin-server.properties
 - http://localhost:8888/discovery-server.properties
 - http://localhost:8888/employee-service.properties
@@ -22,5 +21,4 @@ los archivos de configuracion:
 - http://localhost:8888/organization-service.properties
 - http://localhost:8888/utl-capadb.properties
 - http://localhost:8888/gateway-server.properties
-
 

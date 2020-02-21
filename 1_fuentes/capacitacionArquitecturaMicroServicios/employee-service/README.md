@@ -19,34 +19,41 @@ http://localhost:8092/swagger-ui.html
 *********************************************************************************
 Los LINK [GET] son:
 ------------------
-1. consultarEmpleadosAll: [http://localhost:8092/employeeservice/get/empleados]
+1. consultarEmpleadosAll: 
    http://localhost:8092/employeeservice/get/empleados
 
-2. consultarEmpleadosPorId: [http://localhost:8092/employeeservice/get/empleados/{id}]  
+2. consultarEmpleadosPorId:   
    http://localhost:8092/employeeservice/get/empleados/1
                                                              
-3. consultarEmpleadosPorDepartamento: [http://localhost:8092/employeeservice/empleados-departamento/{idDep}]   
+3. consultarEmpleadosPorDepartamento: 
    http://localhost:8092/employeeservice/get/empleados-departamento/1
  
  
 Los LINK [POST] son:
 -------------------
-4. agregarEmpleado: [http://localhost:8092/employeeservice/post/empleados
+4. agregarEmpleado:  
    http://localhost:8092/employeeservice/post/empleados
  
+	{   
+	  "nombre": "PAOLO GUERRERO", 
+	  "edad":   35, 
+	  "rol":    "CONSULTOR",
+	  
+	  "idDep":  "1" 
+	}
+	
  
 Los LINK [DELETE] son: 
 ---------------------
-5. eliminarEmpleado: [http://localhost:8092/employeeservice/delete/empleados/{id}]]
+5. eliminarEmpleado:  
    http://localhost:8092/employeeservice/delete/empleados/1
  
  
  
 DETALLE:
 -------
-1. FEIGN:        Permite consumir WebService REST, apuntando directamente al 'NOMBRE' del WebService & 'URI' respectivamente, por medio de una Interface.
-2. EUREKACLIENT: Permite consumir WebService REST, apuntando directamente al 'ID' de EUREKA del WebService registrado en el.
+* FEIGN:        Permite consumir WebService REST, apuntando directamente al 'NOMBRE' del WebService & 'URI' respectivamente, por medio de una Interface.
+* EUREKACLIENT: Permite consumir WebService REST, apuntando directamente al 'ID' de EUREKA del WebService registrado en el.
 
-
-Para DETALLES del MICROSERVICIO, apoyarse en ACTUATOR ingresando a: 'http://localhost:8092/actuator'
+- Para DETALLES del MICROSERVICIO, apoyarse en ACTUATOR ingresando a: 'http://localhost:8092/actuator'
 

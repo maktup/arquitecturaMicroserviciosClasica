@@ -18,35 +18,40 @@ http://localhost:8091/swagger-ui.html
 *********************************************************************************
 Los LINK [GET] son:
 ------------------
-1. consultardepartamentosAll: [http://localhost:8091/departmentservice/get/departamentos]
+1. consultardepartamentosAll: 
    http://localhost:8091/departmentservice/get/departamentos
 
-2. consultardepartamentosPorId: [http://localhost:8091/departmentservice/get/departamentos/{id}]
+2. consultardepartamentosPorId:  
    http://localhost:8091/departmentservice/get/departamentos/1
                                                              
-3. consultardepartamentosPorDepartamento: [http://localhost:8091/departmentservice/departamentos-organizacion/{idOrg}]
+3. consultardepartamentosPorDepartamento:  
    http://localhost:8091/departmentservice/get/departamentos-organizacion/1
  
  
 Los LINK [POST] son:
 -------------------
-4. agregarDepartamento: [http://localhost:8091/departmentservice/post/departamentos]
+4. agregarDepartamento:  
    http://localhost:8091/departmentservice/post/departamentos
+ 
+	{    
+	  "nombre": "RRHH",  
+	  
+      "idOrg":  "1" 
+	}
  
  
 Los LINK [DELETE] son: 
 ---------------------
-5. eliminarDepartamento: [http://localhost:8091/departmentservice/delete/departamentos/{id}]
+5. eliminarDepartamento: 
    http://localhost:8091/departmentservice/delete/departamentos/1
    
 
 
 DETALLE:
 -------
-1. FEIGN:        Permite consumir WebService REST, apuntando directamente al 'NOMBRE' del WebService & 'URI' respectivamente, por medio de una Interface.
-2. EUREKACLIENT: Permite consumir WebService REST, apuntando directamente al 'ID' de EUREKA del WebService registrado en el.
-
+* FEIGN:        Permite consumir WebService REST, apuntando directamente al 'NOMBRE' del WebService & 'URI' respectivamente, por medio de una Interface.
+* EUREKACLIENT: Permite consumir WebService REST, apuntando directamente al 'ID' de EUREKA del WebService registrado en el.
  
-Para DETALLES del MICROSERVICIO, apoyarse en ACTUATOR ingresando a: 'http://localhost:8091/actuator'
+- Para DETALLES del MICROSERVICIO, apoyarse en ACTUATOR ingresando a: 'http://localhost:8091/actuator'
 
  

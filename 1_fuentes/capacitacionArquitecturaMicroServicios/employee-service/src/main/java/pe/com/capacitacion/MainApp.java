@@ -23,7 +23,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  @EnableDiscoveryClient     //IMPORTANTE: 'EUREKA CLIENT' 
  @EnableHystrix             //IMPORTANTE: 'HYSTRIX' 
  @EnableFeignClients        //IMPORTANTE: 'FEIGN CLIENT'  
- @EnableSwagger2            //IMPORTANTE: 'SWAGGER'  
+ @EnableSwagger2            //IMPORTANTE: 'SWAGGER' 
  public class MainApp{
  
 	    public static final String PAQUETE_SCAN = "pe.com.capacitacion.controller";

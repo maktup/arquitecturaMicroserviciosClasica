@@ -5,8 +5,7 @@ IMPORTANTE:
 El 'ARCHIVO DE CONFIGURACION' para el SERVER: 'gateway-server', se manejara en la ruta del 'GITHUB': '/gateway-server.properties' 
 Todo de maejara por medio de un PUERTO propio del 'GATEWAY'. 
 
-Los LINKs [GET] son:
-  
+
 
 *********************************************************************************
 ********************************** [EMPLEADOS] **********************************

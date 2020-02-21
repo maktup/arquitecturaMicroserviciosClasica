@@ -18,93 +18,21 @@ http://localhost:8093/swagger-ui.html
 *********************************************************************************
 Los LINK [GET] son:
 ------------------
-1. consultarEmpleadosAll: [http://localhost:8093/utlcapadb/get/empleados]
+1. consultarEmpleadosAll:  
    http://localhost:8093/utlcapadb/get/empleados
 
-2. consultarEmpleadosPorId: [http://localhost:8093/utlcapadb/get/empleados/{id}]  
+2. consultarEmpleadosPorId:   
    http://localhost:8093/utlcapadb/get/empleados/1
   
-3. consultarEmpleadosPorDepartamento: [http://localhost:8093/utlcapadb/get/empleados-departamento/{idDep}]  
+3. consultarEmpleadosPorDepartamento:   
    http://localhost:8093/utlcapadb/get/empleados-departamento/1
  
  
 Los LINK [POST] son:
 ------------------
-4. agregarEmpleado: [http://localhost:8093/utlcapadb/post/empleados]
+4. agregarEmpleado:  
    http://localhost:8093/utlcapadb/post/empleados
 
-
-Los LINK [DELETE] son:
----------------------
-5. eliminarEmpleado: [http://localhost:8093/utlcapadb/delete/empleados/{id}]  
-   http://localhost:8093/utlcapadb/delete/empleados/1 
-   
-
-*********************************************************************************
-******************************** [DEPARTAMENTOS] ********************************
-********************************************************************************* 
-Los LINK [GET] son:
-------------------
-1. consultarDepartamentosAll: [http://localhost:8093/utlcapadb/get/departamentos]
-   http://localhost:8093/utlcapadb/get/departamentos
-
-2. consultarDepartamentosPorId: [http://localhost:8093/utlcapadb/get/departamentos/{id}]  
-   http://localhost:8093/utlcapadb/get/departamentos/1
-  
-3. consultarDepartamentosPorEmpleados: [http://localhost:8093/utlcapadb/get/departamentos-organizacion/{idOrg}]  
-   http://localhost:8093/utlcapadb/get/departamentos-organizacion/1
-  
- 
-Los LINK [POST] son:
-------------------
-4. agregarDepartamento: [http://localhost:8093/utlcapadb/post/departamentos]
-   http://localhost:8093/utlcapadb/post/departamentos
-
-
-Los LINK [DELETE] son:
----------------------
-5. eliminarEmpleado: [http://localhost:8093/utlcapadb/delete/departamentos/{id}]  
-   http://localhost:8093/utlcapadb/delete/departamentos/1 
-     
-   
-**********************************************************************************
-******************************** [ORGANIZACIONES] ********************************
-********************************************************************************** 
-Los LINK [GET] son:
-------------------
-1. consultarOrganizacionesAll: [http://localhost:8093/utlcapadb/get/organizaciones]
-   http://localhost:8093/utlcapadb/get/organizaciones
-
-2. consultarOrganizacionesPorId: [http://localhost:8093/utlcapadb/get/organizaciones/{id}]  
-   http://localhost:8093/utlcapadb/get/organizaciones/1
- 
- 
-Los LINK [POST] son:
-------------------
-3. agregarOrganizacion: [http://localhost:8093/utlcapadb/post/organizaciones]
-   http://localhost:8093/utlcapadb/post/organizaciones
-
-
-Los LINK [DELETE] son:
----------------------
-4. eliminarOrganizacion: [http://localhost:8093/utlcapadb/delete/organizaciones/{id}]  
-   http://localhost:8093/utlcapadb/delete/organizaciones/1 
-
- 
-
-DETALLE:
--------
-- Para DETALLES del MICROSERVICIO, apoyarse en ACTUATOR ingresando a: 'http://localhost:8093/actuator'
- 
-
-
-'REQUEST' para los REGISTROS de tipo: 'POST':
---------------------------------------------
-
-*********************************************************************************
-********************************** [EMPLEADOS] **********************************
-*********************************************************************************
-1. REGISTRAR 'EMPLEADOS': 
 	{   
 	  "nombre": "PAOLO GUERRERO", 
 	  "edad":   35, 
@@ -113,22 +41,80 @@ DETALLE:
 	  "idDep":  "1" 
 	}
 
+
+Los LINK [DELETE] son:
+---------------------
+5. eliminarEmpleado:   
+   http://localhost:8093/utlcapadb/delete/empleados/1 
+   
+
 *********************************************************************************
 ******************************** [DEPARTAMENTOS] ********************************
 ********************************************************************************* 
-2. REGISTRAR 'DEPARTAMENTOS':
+Los LINK [GET] son:
+------------------
+1. consultarDepartamentosAll:  
+   http://localhost:8093/utlcapadb/get/departamentos
+
+2. consultarDepartamentosPorId:   
+   http://localhost:8093/utlcapadb/get/departamentos/1
+  
+3. consultarDepartamentosPorEmpleados:  
+   http://localhost:8093/utlcapadb/get/departamentos-organizacion/1
+  
+ 
+Los LINK [POST] son:
+------------------
+4. agregarDepartamento:  
+   http://localhost:8093/utlcapadb/post/departamentos
+
 	{    
 	  "nombre": "RRHH",  
 	  
       "idOrg":  "1" 
 	}
 
+
+Los LINK [DELETE] son:
+---------------------
+5. eliminarEmpleado: 
+   http://localhost:8093/utlcapadb/delete/departamentos/1 
+     
+   
 **********************************************************************************
 ******************************** [ORGANIZACIONES] ********************************
-**********************************************************************************
-3. REGISTRAR 'ORGANIZACIONES':
+********************************************************************************** 
+Los LINK [GET] son:
+------------------
+1. consultarOrganizacionesAll: 
+   http://localhost:8093/utlcapadb/get/organizaciones
+
+2. consultarOrganizacionesPorId:  
+   http://localhost:8093/utlcapadb/get/organizaciones/1
+ 
+ 
+Los LINK [POST] son:
+------------------
+3. agregarOrganizacion: 
+   http://localhost:8093/utlcapadb/post/organizaciones
+
 	{    
 	  "nombre":    "AMAZON", 
 	  "direccion": "Calle Chincheros 121, La Molina"   
 	}
+	
 
+Los LINK [DELETE] son:
+---------------------
+4. eliminarOrganizacion:  
+   http://localhost:8093/utlcapadb/delete/organizaciones/1 
+
+ 
+
+DETALLE:
+-------
+* FEIGN:        Permite consumir WebService REST, apuntando directamente al 'NOMBRE' del WebService & 'URI' respectivamente, por medio de una Interface.
+* EUREKACLIENT: Permite consumir WebService REST, apuntando directamente al 'ID' de EUREKA del WebService registrado en el.
+
+- Para DETALLES del MICROSERVICIO, apoyarse en ACTUATOR ingresando a: 'http://localhost:8093/actuator'
+ 

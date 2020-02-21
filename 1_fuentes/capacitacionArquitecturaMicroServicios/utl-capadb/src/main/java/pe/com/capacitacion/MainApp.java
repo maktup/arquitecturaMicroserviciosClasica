@@ -1,5 +1,5 @@
 package pe.com.capacitacion;
-
+ 
 import javax.sql.DataSource; 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
@@ -15,7 +15,7 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
-import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spi.DocumentationType; 
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
  
@@ -26,7 +26,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  @SpringBootApplication
  @EnableDiscoveryClient     //IMPORTANTE: 'EUREKA CLIENT' 
  @EnableHystrix             //IMPORTANTE: 'HYSTRIX' 
- @EnableFeignClients        //IMPORTANTE: 'FEIGN CLIENT'
+ @EnableFeignClients        //IMPORTANTE: 'FEIGN CLIENT'  
  @EnableSwagger2            //IMPORTANTE: 'SWAGGER' 
  public class MainApp{
 	
@@ -66,21 +66,22 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 	                  .description( "CONTRATO/API DEL MICROSERVICIO: utl-capadb" )
 	                  .license( "Apache 2.0" )
 	                  .licenseUrl( "http://www.apache.org/licenses/LICENSE-2.0.html" )
-	                  .termsOfServiceUrl( "" )
+	                  .termsOfServiceUrl( "" ) 
 	                  .version( "1.0" )
 	                  .contact( new Contact( "", "", "cesarricardo_guerra19@hotmail.com" ) )
 	                  .build();
-	    }
-
+	    } 
+ 
 	    @Bean
 	    public Docket customImplementation(){
-	        return new Docket( DocumentationType.SWAGGER_2 )
+	        return new Docket( DocumentationType.SWAGGER_2 ) 
 	                .select()
 	                .apis( RequestHandlerSelectors.basePackage( PAQUETE_SCAN ) )
 	                .paths( PathSelectors.any() ) 
                     .build() 
                     .apiInfo( this.apiInfo() );
 	    }
+ 
 	    //---------------------------------------- [SWAGGER] ----------------------------------------// 
 		
  } 
