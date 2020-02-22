@@ -36,16 +36,20 @@ C:\JAVA\JDK\jdk1.8.0_91\bin\javaw.exe
 
 RUTAS 'HOST': 
 ------------ 
-Para la 'SIMULACION' se debe reeemplazar en HOST los DNS's de la siguiente manera:
+Las IPs ahi deberian ser manejadas como FIJAS, sino ACTUALIZARLAS constantemente.
  
+#------------ [CONFIGURACION 'ARQUITECTURA-CLASICA'] ------------#
+#-- 'IP de LOCAL':
 127.0.0.1  arquitectura.microservicios.clasica.config-server
 127.0.0.1  arquitectura.microservicios.clasica.boot-admin-server
 127.0.0.1  arquitectura.microservicios.clasica.discovery-server
-127.0.0.1  arquitectura.microservicios.clasica.zipkin-server
-127.0.0.1  arquitectura.microservicios.clasica.oracle-server
+127.0.0.1  arquitectura.microservicios.clasica.zipkin-server 
+#------------ [CONFIGURACION 'ARQUITECTURA-CLASICA'] ------------#
+
 
 IMPORTANTE: Para el caso de 'NEXUS2', su URL es de un DNS Externo con 'NO-IP':
 http://repositorio-nexus.ddns.net:8081/nexus/content/repositories/Repositorio_TallerMicroservicios_releases/ 
+
 
 
 INICIANDO ['ZIPKIN' & 'SLEUTH']:
