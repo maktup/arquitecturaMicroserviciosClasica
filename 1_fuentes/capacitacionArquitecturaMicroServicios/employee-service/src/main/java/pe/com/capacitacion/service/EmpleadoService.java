@@ -201,7 +201,7 @@ import pe.com.capacitacion.util.Constantes;
  
 			   //Armando URI: 
 			   String vURL01 = (vURLInst04 + Constantes.SERVICE_NAME_04 + "/" + Constantes.HTTP_METHOD_01 + vURI + id); 
-			   log.info( "========>: vURL01 [" + vURL01 + "]" );
+			   log.info( "========>: vURL0 [" + vURL01 + "]" );
 			   
 			   //Enviar mensaje GET: 
 			   String vCadenaJSON_01 = objRspTmp.getForObject( vURL01, String.class );

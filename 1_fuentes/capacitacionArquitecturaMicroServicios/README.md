@@ -43,7 +43,8 @@ Las IPs ahi deberian ser manejadas como FIJAS, sino ACTUALIZARLAS constantemente
 127.0.0.1  arquitectura.microservicios.clasica.config-server
 127.0.0.1  arquitectura.microservicios.clasica.boot-admin-server
 127.0.0.1  arquitectura.microservicios.clasica.discovery-server
-127.0.0.1  arquitectura.microservicios.clasica.zipkin-server 
+127.0.0.1  arquitectura.microservicios.clasica.zipkin-server
+127.0.0.1  arquitectura.microservicios.clasica.oracle-server
 #------------ [CONFIGURACION 'ARQUITECTURA-CLASICA'] ------------#
 
 
